@@ -14,12 +14,14 @@ export async function createUserSessionHandler(req: Request, res: Response) {
   const accessToken = signJwt(
     {
       ...user,
+      //@ts-ignore
       session: session._id,
     },
     { expiresIn: config.get("accessTokenTtl") }
   );
-  console.log(accessToken);
+
   const refreshToken = signJwt(
+    //@ts-ignore
     { ...user, session: session._id },
     { expiresIn: config.get("refreshTokenTtl") }
   );
