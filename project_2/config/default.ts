@@ -24,6 +24,6 @@ Od91loje8utlgzo7cgSmK61h6xu0sB7kAX98g7ttPtnM+IVEzZ1SqrtpAkEAiNE9
 0NQ5yfosV2OJOJrjswJAKFwA1Vfgmm6qs70XzX+IwMgEj6Acbs1Aqc4c8QXQmVlz
 Gdbpnldhz0eAGGYn48L/1W/ke00TklQ3IWgmo/TVCA==
 -----END RSA PRIVATE KEY-----`,
-  accessTokenTtl: "15m",
+  accessTokenTtl: "1m",
   refreshTokenTtl: "1y",
 };
