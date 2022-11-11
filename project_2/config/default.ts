@@ -26,4 +26,5 @@ Gdbpnldhz0eAGGYn48L/1W/ke00TklQ3IWgmo/TVCA==
 -----END RSA PRIVATE KEY-----`,
   accessTokenTtl: "15m",
   refreshTokenTtl: "1y",
+  origin: ["http://localhost:3000", "https://conduit-theta.vercel.app"],
 };

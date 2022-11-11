@@ -12,9 +12,13 @@ export async function createUserHandler(
   try {
     const user = await createUser(req.body);
 
-    return res.send(omit(user.toJSON(), "password"));
+    return res.send(omit(user));
   } catch (error: any) {
     logger.error(error);
     return res.status(409).send(error.message);
   }
+}
+
+export async function getCurrentUserHandler(req: Request, res: Response) {
+  return res.send(res.locals.user);
 }
