@@ -1,7 +1,7 @@
 /node_modules
 dist
 build
-/config
+/config/default.ts
 env*
 .DS_Store
 *.pem
