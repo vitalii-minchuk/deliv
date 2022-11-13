@@ -122,6 +122,5 @@ export async function findAndUpdateUser(
   update: UpdateQuery<UserDocument>,
   options: QueryOptions = {}
 ) {
-  console.log({ query, update, options });
   return UserModel.findByIdAndUpdate(query, update, options);
 }
