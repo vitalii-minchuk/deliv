@@ -4,6 +4,7 @@ import {
   createUserSessionHandler,
   deleteUserSessionHandler,
   getUserSessionsHandler,
+  googleOAuthHandler,
 } from "./controller/session.controller";
 import {
   createUserHandler,
@@ -66,6 +67,8 @@ function routes(app: Express) {
     [requireUser, validateResource(deleteProductSchema)],
     deleteProductHandler
   );
+
+  app.get("/api/sessions/oauth/google", googleOAuthHandler);
 }
 
 export default routes;
