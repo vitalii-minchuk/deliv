@@ -1,4 +1,5 @@
 import "reflect-metadata";
+
 import { createServer } from "./utils/create-server";
 
 async function main() {
@@ -7,6 +8,12 @@ async function main() {
   app.get("/healthcheck", async () => "OK");
 
   await server.start();
+
+  app.register(
+    server.createHandler({
+      cors: false,
+    })
+  );
 
   await app.listen({
     port: 4000,

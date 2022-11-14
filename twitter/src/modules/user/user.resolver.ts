@@ -1,15 +1,17 @@
-import { Query, Resolver } from "type-graphql";
+import { Ctx, Mutation, Query, Resolver } from "type-graphql";
+import { Context } from "../../utils/create-server";
 import { User } from "./user.dto";
 
 @Resolver(() => User)
 class UserResolver {
+  @Mutation(() => User)
+  async register() {
+    try {
+    } catch (error) {}
+  }
   @Query(() => User)
-  user() {
-    return {
-      id: "232323",
-      email: "34332",
-      username: "mcm",
-    };
+  me(@Ctx() context: Context) {
+    return context.user;
   }
 }
 
